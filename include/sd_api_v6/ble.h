@@ -539,7 +539,7 @@ SVCALL(SD_BLE_UUID_VS_ADD, uint32_t, sd_ble_uuid_vs_add(adapter_t *adapter, ble_
  * @retval ::NRF_ERROR_FORBIDDEN If the Vendor Specific base UUID is in use by the ATT Server.
  */
 
-SVCALL(SD_BLE_UUID_VS_REMOVE, uint32_t, sd_ble_uuid_vs_remove(adapter_t *adapter, uint8_t *p_uuid_type));
+//SVCALL(SD_BLE_UUID_VS_REMOVE, uint32_t, sd_ble_uuid_vs_remove(adapter_t *adapter, uint8_t *p_uuid_type));
 
 
 /** @brief Decode little endian raw UUID bytes (16-bit or 128-bit) into a 24 bit @ref ble_uuid_t structure.

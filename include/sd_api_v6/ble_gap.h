@@ -1667,7 +1667,7 @@ SVCALL(SD_BLE_GAP_ADDR_GET, uint32_t, sd_ble_gap_addr_get(adapter_t *adapter, bl
  * @retval ::BLE_ERROR_INVALID_ADV_HANDLE The provided advertising handle was not found. 
  * @retval ::NRF_ERROR_INVALID_STATE      The advertising set is currently not advertising.
  */
-SVCALL(SD_BLE_GAP_ADV_ADDR_GET, uint32_t, sd_ble_gap_adv_addr_get(adapter_t *adapter, uint8_t adv_handle, ble_gap_addr_t *p_addr));
+//SVCALL(SD_BLE_GAP_ADV_ADDR_GET, uint32_t, sd_ble_gap_adv_addr_get(adapter_t *adapter, uint8_t adv_handle, ble_gap_addr_t *p_addr));
 
 
 /**@brief Set the active whitelist in the SoftDevice.

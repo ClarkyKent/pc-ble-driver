@@ -51,6 +51,5 @@ endif()
 
 setup_example(heart_rate_monitor)
 setup_example(heart_rate_collector)
-setup_example(nordic_uart_client)
 
 message(STATUS "Compiled examples are installed in directory \"${CMAKE_INSTALL_BINDIR}\"")

@@ -682,3 +682,33 @@ uint32_t sd_ble_gap_data_length_update(adapter_t *adapter, uint16_t conn_handle,
 
     return gap_encode_decode(adapter, encode_function, decode_function);
 }
+
+uint32_t sd_ble_gap_qos_channel_survey_start(adapter_t *adapter, uint32_t interval_us)
+{
+    encode_function_t encode_function = [&](uint8_t *buffer, uint32_t *length) -> uint32_t {
+        return ble_gap_qos_channel_survey_start_req_enc(interval_us, buffer,
+                                                  length);
+    };
+
+    decode_function_t decode_function = [&](uint8_t *buffer, uint32_t length,
+                                            uint32_t *result) -> uint32_t {
+        return ble_gap_qos_channel_survey_start_rsp_dec(buffer, length, result);
+    };
+
+    return gap_encode_decode(adapter, encode_function, decode_function);
+}
+
+uint32_t sd_ble_gap_qos_channel_survey_stop(adapter_t *adapter)
+{
+    encode_function_t encode_function = [&](uint8_t *buffer, uint32_t *length) -> uint32_t {
+        return ble_gap_qos_channel_survey_stop_req_enc( buffer, length);
+    };
+
+    decode_function_t decode_function = [&](uint8_t *buffer, uint32_t length,
+                                            uint32_t *result) -> uint32_t {
+        return ble_gap_qos_channel_survey_stop_rsp_dec(buffer, length, result);
+    };
+
+    return gap_encode_decode(adapter, encode_function, decode_function);
+}
+
